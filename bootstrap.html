@@ -1,0 +1,995 @@
+<html lang='en,zh-cmn'>
+<head>
+	<meta charset="utf-8">
+	<title>bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		    list-style: none;
+		}
+		.jumbotron {
+			
+		    position: relative;
+		    padding: 40px 0;
+		    background: linear-gradient(45deg,#020031 0,#6d3353 100%);
+		    text-align: center;
+		    text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
+		    box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+		}
+		.jumbotron:after {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    background: url(1.png) repeat center center;
+		    opacity: .4;
+		}
+		.masthead {
+		    padding: 60px 0 80px;
+		    margin-bottom: 0;
+		    color: #fff;
+		}
+		.jumbotron .container {
+		    position: relative;
+		    z-index: 2;
+		    max-width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.masthead .masthead-button-links {
+		    margin-top: 30px;
+		}
+		.masthead h1 {
+			margin-top: 100px;
+    		margin-bottom: 10px;
+		    font-size: 100px;
+		    line-height: 1;
+		    letter-spacing: -2px;
+		    font-weight: 700;
+		}
+		.masthead h2 {
+		    font-size: 33px;
+		    font-weight: 200;
+		    line-height: 1.25;
+		}
+		.bc-social {
+		    padding: 15px 0;
+		    text-align: center;
+		    background-color: #f5f5f5;
+		    border-top: 1px solid #fff;
+		    border-bottom: 1px solid #ddd;
+		}
+		.container {
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.bc-social-buttons {
+			margin-top: 0;
+		    margin-left: 0;
+		    margin-bottom: 0;
+		    padding-left: 0;
+		    list-style: none;
+		}
+		.bc-social-buttons li {
+		    display: inline-block;
+		    line-height: 1;
+		    color: #555;
+		}
+		.bc-social-buttons li .fa {
+		    font-size: 18px;
+		    margin-right: 3px;
+		}
+		.fa {
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		    font-size: inherit;
+		    text-rendering: auto;
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+		.bc-social-buttons li a {
+		    color: #555;
+		    background-color: transparent;
+		}
+
+		.container {
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.projects-header {
+		    width: 60%;
+		    text-align: center;
+		    margin: 60px 0 10px;
+		    font-weight: 200;
+		    margin-bottom: 40px;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		
+		.projects-header h2 {
+		    font-size: 45px;
+		    font-weight: 600;
+		    letter-spacing: -1px;
+		}
+		a {
+		    background-color: transparent;
+		}
+		.projects .thumbnail img {
+		    max-width: 100%;
+		    height: auto;
+		}
+		.thumbnail a>img, .thumbnail>img {
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+		    display: block;
+		    max-width: 100%;
+		    height: auto;
+		}
+		img {
+		    vertical-align: middle;
+		    border: 0;
+		}
+		.projects .thumbnail .caption {
+		    height: 200px;
+		    overflow-y: hidden;
+		    color: #555;
+		}
+		.thumbnail .caption {
+		    padding: 9px;
+		    color: #333;
+		}
+		h3 {
+		    display: block;
+		    font-size: 1.17em;
+		    -webkit-margin-before: 1em;
+		    -webkit-margin-after: 1em;
+		    -webkit-margin-start: 0px;
+		    -webkit-margin-end: 0px;
+		    font-weight: bold;
+		}
+		.footer {
+		    color: #777;
+		    padding: 30px 0;
+		    border-top: 1px solid #e5e5e5;
+		    margin-top: 70px;
+		}
+		.footer .container {
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-sm" href="#">Bootstrap中文网</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+          	<li class="hidden-sm hidden-md">
+            	<a href="#" target="_blank" >Bootstrap2中文文档</a>
+            </li>
+            <li>
+            	<a href="#" target="_blank" >Bootstrap3中文文档</a>
+            </li>
+            <li>
+            	<a href="#" target="_blank" >Bootstrap 4.0 预览</a>
+            </li>
+            <li>
+            	<a href="#" target="_blank" >Less 教程</a>
+            </li>
+            <li>
+            	<a href="#" target="_blank" >jQuery API</a>
+            </li>
+            <li>
+            	<a href="#" target="_blank" >网站实例</a>
+            </li>
+            <li>
+            	<i class="fa fa-fire job-hot"></i>
+            	<a href="#" target="_blank" >前端高薪职位</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden-sm">
+            <li><a href="#" >关于</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+	<div class="jumbotron masthead">
+      <div class="container">
+        <h1>Bootstrap</h1>
+        <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2>
+        <p class="masthead-button-links">
+          <a class="btn btn-lg btn-primary btn-shadow" href="#" target="_blank" role="button" onclick="_hmt.push(['_trackEvent', 'masthead', 'click', 'masthead-Bootstrap3中文文档'])">Bootstrap3中文文档(v3.3.5)</a>
+        </p>
+        <ul class="masthead-links">
+          <li>
+            <a href="#" target="_blank" role="button" onclick="_hmt.push(['_trackEvent', 'masthead', 'click', 'masthead-Bootstrap2中文文档'])">Bootstrap2中文文档(v2.3.2)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bc-social">
+      <div class="container">
+        <ul class="bc-social-buttons">
+          <li class="social-qq">
+            <i class="fa fa-qq"></i> Bootstrap技术交流群：<span id="qqgroup">318630708</span>
+          </li>
+          <li class="social-forum">
+            <a class="" href="#" title="Bootstrap问答社区" target="_blank" >
+              <i class="fa fa-comments"></i> Bootstrap问答社区
+            </a>
+          </li>
+          <li class="social-weibo">
+            <a href="#" title="Bootstrap中文网官方微博" target="_blank"><i class="fa fa-weibo"></i> 新浪微博：@Bootstrap中文网</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container projects">
+      <div class="projects-header page-header">
+        <h2>Bootstrap相关优质项目推荐</h2>
+        <p>这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap 编码规范" target="_blank" >
+            	<img class="lazy" src="2.png" width="300" height="150"  alt="Headroom.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" target="_blank" >Bootstrap 编码规范<br>
+                	<small>by @mdo</small>
+                </a>
+              </h3>
+              <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="jQuery API 中文文档/手册" target="_blank" >
+            	<img class="lazy" src="3.png" width="300" height="150" alt="jQuery API 中文文档/手册"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="jQuery API 中文文档/手册" target="_blank">jQuery API <br>
+                	<small>中文手册</small>
+                </a>
+              </h3>
+              <p>
+              根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="w3schools 原版国内镜像" target="_blank" >
+            	<img class="lazy" src="4.png" width="300" height="150"  alt="w3schools 原版国内镜像"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="w3schools 原版国内镜像" target="_blank" >w3schools<br>
+                	<small>原版国内镜像</small>
+                </a>
+              </h3>
+              <p>w3schools.com 是最受欢迎的前端技术教程网站，但是国内用户一直不能访问，并且国内的中文翻译版本十分陈旧。因此做了个镜像，希望英文好的同学直接去看原版教程吧！</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap优站精选" target="_blank">
+            	<img class="lazy" src="5.png" width="300" height="150"  alt="Bootstrap优站精选"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap优站精选" target="_blank" >优站精选<br><small>Bootstrap网站实例</small></a>
+              </h3>
+              <p>Bootstrap优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+            </div>
+          </div>
+        </div>
+
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >
+            	<img class="lazy" src="6.png" width="300" height="150" alt="gulpjs"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >gulp.js<br>
+                	<small>基于流的自动化构建工具。</small>
+                </a>
+              </h3>
+              <p>gulp.js - 基于流(stream)的自动化构建工具。Grunt 采用配置文件的方式执行任务，而 Gulp 一切都通过代码实现。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="LESS一种动态样式语言" target="_blank">
+            	<img class="lazy" src="7.png" width="300" height="150"alt="LESSCSS"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="LESS一种动态样式语言" target="_blank">LESS<br>
+                	<small>一种动态样式语言</small>
+                </a>
+              </h3>
+              <p>LESS为CSS赋予了动态语言的特性，如变量、继承、运算、函数。LESS既可以在客户端上运行 (支持IE 6+、Webkit、Firefox)，也可以借助Node.js或者Rhino在服务端运行。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >
+            	<img class="lazy" src="8.png" width="300" height="150" alt="Lodash"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >Lodash<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p> Lodash 是一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库。比相同功能的 Underscore.js 使用更广泛。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank" >
+            	<img class="lazy" src="9.png" width="300" height="150" alt="Open CDN"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank">Open CDN<br>
+                	<small>开放CDN服务</small>
+                </a>
+              </h3>
+              <p>Bootstrap中文网联合又拍云存储共同推出了开放CDN服务，我们对广泛的前端开源库提供了稳定的存储和带宽的支持，例如Bootstrap、jQuery等。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >
+            	<img class="lazy" src="10.png" width="300" height="150" alt="Underscore.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >Underscore.js<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p>Underscore.js是一个 JavaScript 工具库，它提供了一整套函数式编程的实用功能，弥补了 jQuery 没有实现的功能，同时又是 Backbone 必不可少的部分。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank" >
+            	<img class="lazy" src="11.png" width="300" height="150"  alt="Buttons"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank"> Buttons<br>
+                	<small>CSS按钮样式库</small>
+                </a>
+              </h3>
+              <p>Buttons 是一个基于 Sass 和 Compass 构建的CSS按钮（button）样式库，图标采用的是<a href="/p/font-awesome/" target="_blank">Font Awesome</a>，可以和Bootstrap融合使用。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >
+            	<img class="lazy" src="12.png" width="300" height="150" alt="stickUp">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >stickUp<br>
+                	<small>让页面元素“固定”位置</small>
+                </a>
+              </h3>
+              <p>stickUp能让页面目标元素“固定”在浏览器窗口的顶部，即便页面在滚动，目标元素仍然能出现在设定的位置。</p>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="响应式导航" target="_blank" o>
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Responsive Nav">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="响应式导航" target="_blank"><br>
+                	<small>响应式导航</small>
+                </a>
+              </h3>
+              <p>响应式导航（Responsive Nav）是一个很小的JS插件，压缩之后仅有1.7KB，能帮你创建针对小屏幕的可切换式导航</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Unslider" target="_blank" >
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Unslider">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Unslider" target="_blank" >Unslider<br>
+                	<small>jQuery轮播插件</small>
+                </a>
+              </h3>
+              <p>Unslider — 一个超小的 jQuery 轮播（slider） 插件。支持主流浏览器、键盘导航、自动调整高度和响应式布局。</p>
+            </div>
+          </div>
+        </div>
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+			<div class="thumbnail" style="height: 360px;">
+				<a href="#" title="Flat UI" target="_blank" >
+					<img class="lazy" src="14.png" width="300" height="150" alt="Flat UI">
+				</a>
+				<div class="caption">
+				<h3>
+				<a href="#" title="Flat UI" target="_blank">Flat UI<br><small>Metro风格的Bootstrap</small></a>
+				</h3>
+				<p>
+				Flat UI是基于Bootstrap做的Metro化改造，由<a href="http://designmodo.com/">Designmodo</a>提供。Flat UI包含了很多Bootstrap提供的组件，但是外观更加漂亮。在此强烈推荐！
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap 编码规范" target="_blank" >
+            	<img class="lazy" src="2.png" width="300" height="150"  alt="Headroom.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" target="_blank" >Bootstrap 编码规范<br>
+                	<small>by @mdo</small>
+                </a>
+              </h3>
+              <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="jQuery API 中文文档/手册" target="_blank" >
+            	<img class="lazy" src="3.png" width="300" height="150" alt="jQuery API 中文文档/手册"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="jQuery API 中文文档/手册" target="_blank">jQuery API <br>
+                	<small>中文手册</small>
+                </a>
+              </h3>
+              <p>
+              根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="w3schools 原版国内镜像" target="_blank" >
+            	<img class="lazy" src="4.png" width="300" height="150"  alt="w3schools 原版国内镜像"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="w3schools 原版国内镜像" target="_blank" >w3schools<br>
+                	<small>原版国内镜像</small>
+                </a>
+              </h3>
+              <p>w3schools.com 是最受欢迎的前端技术教程网站，但是国内用户一直不能访问，并且国内的中文翻译版本十分陈旧。因此做了个镜像，希望英文好的同学直接去看原版教程吧！</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap优站精选" target="_blank">
+            	<img class="lazy" src="5.png" width="300" height="150"  alt="Bootstrap优站精选"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap优站精选" target="_blank" >优站精选<br><small>Bootstrap网站实例</small></a>
+              </h3>
+              <p>Bootstrap优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+            </div>
+          </div>
+        </div>
+
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >
+            	<img class="lazy" src="6.png" width="300" height="150" alt="gulpjs"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >gulp.js<br>
+                	<small>基于流的自动化构建工具。</small>
+                </a>
+              </h3>
+              <p>gulp.js - 基于流(stream)的自动化构建工具。Grunt 采用配置文件的方式执行任务，而 Gulp 一切都通过代码实现。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="LESS一种动态样式语言" target="_blank">
+            	<img class="lazy" src="7.png" width="300" height="150"alt="LESSCSS"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="LESS一种动态样式语言" target="_blank">LESS<br>
+                	<small>一种动态样式语言</small>
+                </a>
+              </h3>
+              <p>LESS为CSS赋予了动态语言的特性，如变量、继承、运算、函数。LESS既可以在客户端上运行 (支持IE 6+、Webkit、Firefox)，也可以借助Node.js或者Rhino在服务端运行。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >
+            	<img class="lazy" src="8.png" width="300" height="150" alt="Lodash"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >Lodash<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p> Lodash 是一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库。比相同功能的 Underscore.js 使用更广泛。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank" >
+            	<img class="lazy" src="9.png" width="300" height="150" alt="Open CDN"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank">Open CDN<br>
+                	<small>开放CDN服务</small>
+                </a>
+              </h3>
+              <p>Bootstrap中文网联合又拍云存储共同推出了开放CDN服务，我们对广泛的前端开源库提供了稳定的存储和带宽的支持，例如Bootstrap、jQuery等。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >
+            	<img class="lazy" src="10.png" width="300" height="150" alt="Underscore.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >Underscore.js<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p>Underscore.js是一个 JavaScript 工具库，它提供了一整套函数式编程的实用功能，弥补了 jQuery 没有实现的功能，同时又是 Backbone 必不可少的部分。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank" >
+            	<img class="lazy" src="11.png" width="300" height="150"  alt="Buttons"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank"> Buttons<br>
+                	<small>CSS按钮样式库</small>
+                </a>
+              </h3>
+              <p>Buttons 是一个基于 Sass 和 Compass 构建的CSS按钮（button）样式库，图标采用的是<a href="/p/font-awesome/" target="_blank">Font Awesome</a>，可以和Bootstrap融合使用。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >
+            	<img class="lazy" src="12.png" width="300" height="150" alt="stickUp">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >stickUp<br>
+                	<small>让页面元素“固定”位置</small>
+                </a>
+              </h3>
+              <p>stickUp能让页面目标元素“固定”在浏览器窗口的顶部，即便页面在滚动，目标元素仍然能出现在设定的位置。</p>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="响应式导航" target="_blank" o>
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Responsive Nav">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="响应式导航" target="_blank"><br>
+                	<small>响应式导航</small>
+                </a>
+              </h3>
+              <p>响应式导航（Responsive Nav）是一个很小的JS插件，压缩之后仅有1.7KB，能帮你创建针对小屏幕的可切换式导航</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Unslider" target="_blank" >
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Unslider">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Unslider" target="_blank" >Unslider<br>
+                	<small>jQuery轮播插件</small>
+                </a>
+              </h3>
+              <p>Unslider — 一个超小的 jQuery 轮播（slider） 插件。支持主流浏览器、键盘导航、自动调整高度和响应式布局。</p>
+            </div>
+          </div>
+        </div>
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+			<div class="thumbnail" style="height: 360px;">
+				<a href="#" title="Flat UI" target="_blank" >
+					<img class="lazy" src="14.png" width="300" height="150" alt="Flat UI">
+				</a>
+				<div class="caption">
+				<h3>
+				<a href="#" title="Flat UI" target="_blank">Flat UI<br><small>Metro风格的Bootstrap</small></a>
+				</h3>
+				<p>
+				Flat UI是基于Bootstrap做的Metro化改造，由<a href="http://designmodo.com/">Designmodo</a>提供。Flat UI包含了很多Bootstrap提供的组件，但是外观更加漂亮。在此强烈推荐！
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap 编码规范" target="_blank" >
+            	<img class="lazy" src="2.png" width="300" height="150"  alt="Headroom.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。" target="_blank" >Bootstrap 编码规范<br>
+                	<small>by @mdo</small>
+                </a>
+              </h3>
+              <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="jQuery API 中文文档/手册" target="_blank" >
+            	<img class="lazy" src="3.png" width="300" height="150" alt="jQuery API 中文文档/手册"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="jQuery API 中文文档/手册" target="_blank">jQuery API <br>
+                	<small>中文手册</small>
+                </a>
+              </h3>
+              <p>
+              根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="w3schools 原版国内镜像" target="_blank" >
+            	<img class="lazy" src="4.png" width="300" height="150"  alt="w3schools 原版国内镜像"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="w3schools 原版国内镜像" target="_blank" >w3schools<br>
+                	<small>原版国内镜像</small>
+                </a>
+              </h3>
+              <p>w3schools.com 是最受欢迎的前端技术教程网站，但是国内用户一直不能访问，并且国内的中文翻译版本十分陈旧。因此做了个镜像，希望英文好的同学直接去看原版教程吧！</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap优站精选" target="_blank">
+            	<img class="lazy" src="5.png" width="300" height="150"  alt="Bootstrap优站精选"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap优站精选" target="_blank" >优站精选<br><small>Bootstrap网站实例</small></a>
+              </h3>
+              <p>Bootstrap优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+            </div>
+          </div>
+        </div>
+
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >
+            	<img class="lazy" src="6.png" width="300" height="150" alt="gulpjs"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="gulp.js - 基于流的自动化构建工具。" target="_blank" >gulp.js<br>
+                	<small>基于流的自动化构建工具。</small>
+                </a>
+              </h3>
+              <p>gulp.js - 基于流(stream)的自动化构建工具。Grunt 采用配置文件的方式执行任务，而 Gulp 一切都通过代码实现。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="LESS一种动态样式语言" target="_blank">
+            	<img class="lazy" src="7.png" width="300" height="150"alt="LESSCSS"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="LESS一种动态样式语言" target="_blank">LESS<br>
+                	<small>一种动态样式语言</small>
+                </a>
+              </h3>
+              <p>LESS为CSS赋予了动态语言的特性，如变量、继承、运算、函数。LESS既可以在客户端上运行 (支持IE 6+、Webkit、Firefox)，也可以借助Node.js或者Rhino在服务端运行。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >
+            	<img class="lazy" src="8.png" width="300" height="150" alt="Lodash"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Lodash 是最流行的 JavaScript 工具库。" target="_blank" >Lodash<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p> Lodash 是一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库。比相同功能的 Underscore.js 使用更广泛。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank" >
+            	<img class="lazy" src="9.png" width="300" height="150" alt="Open CDN"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Bootstrap中文网开放CDN服务" target="_blank">Open CDN<br>
+                	<small>开放CDN服务</small>
+                </a>
+              </h3>
+              <p>Bootstrap中文网联合又拍云存储共同推出了开放CDN服务，我们对广泛的前端开源库提供了稳定的存储和带宽的支持，例如Bootstrap、jQuery等。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >
+            	<img class="lazy" src="10.png" width="300" height="150" alt="Underscore.js"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Underscore.js 是一个 JavaScript 工具库" target="_blank" >Underscore.js<br>
+                	<small>JavaScript 工具库</small>
+                </a>
+              </h3>
+              <p>Underscore.js是一个 JavaScript 工具库，它提供了一整套函数式编程的实用功能，弥补了 jQuery 没有实现的功能，同时又是 Backbone 必不可少的部分。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank" >
+            	<img class="lazy" src="11.png" width="300" height="150"  alt="Buttons"></a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="基于 Sass 和 Compass 构建的CSS按钮（button）样式库" target="_blank"> Buttons<br>
+                	<small>CSS按钮样式库</small>
+                </a>
+              </h3>
+              <p>Buttons 是一个基于 Sass 和 Compass 构建的CSS按钮（button）样式库，图标采用的是<a href="/p/font-awesome/" target="_blank">Font Awesome</a>，可以和Bootstrap融合使用。</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >
+            	<img class="lazy" src="12.png" width="300" height="150" alt="stickUp">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="stickUp能让页面目标元素“固定”在浏览器窗口的顶部" target="_blank" >stickUp<br>
+                	<small>让页面元素“固定”位置</small>
+                </a>
+              </h3>
+              <p>stickUp能让页面目标元素“固定”在浏览器窗口的顶部，即便页面在滚动，目标元素仍然能出现在设定的位置。</p>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="响应式导航" target="_blank" o>
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Responsive Nav">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="响应式导航" target="_blank"><br>
+                	<small>响应式导航</small>
+                </a>
+              </h3>
+              <p>响应式导航（Responsive Nav）是一个很小的JS插件，压缩之后仅有1.7KB，能帮你创建针对小屏幕的可切换式导航</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="height: 360px;">
+            <a href="#" title="Unslider" target="_blank" >
+            	<img class="lazy" src="13.png" width="300" height="150" alt="Unslider">
+            </a>
+            <div class="caption">
+              <h3>
+                <a href="#" title="Unslider" target="_blank" >Unslider<br>
+                	<small>jQuery轮播插件</small>
+                </a>
+              </h3>
+              <p>Unslider — 一个超小的 jQuery 轮播（slider） 插件。支持主流浏览器、键盘导航、自动调整高度和响应式布局。</p>
+            </div>
+          </div>
+        </div>
+
+		<div class="col-sm-6 col-md-4 col-lg-3 ">
+			<div class="thumbnail" style="height: 360px;">
+				<a href="#" title="Flat UI" target="_blank" >
+					<img class="lazy" src="14.png" width="300" height="150" alt="Flat UI">
+				</a>
+				<div class="caption">
+				<h3>
+				<a href="#" title="Flat UI" target="_blank">Flat UI<br><small>Metro风格的Bootstrap</small></a>
+				</h3>
+				<p>
+				Flat UI是基于Bootstrap做的Metro化改造，由<a href="http://designmodo.com/">Designmodo</a>提供。Flat UI包含了很多Bootstrap提供的组件，但是外观更加漂亮。在此强烈推荐！
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer ">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-sm-6 col-lg-6">
+            <h4>
+              <img src="http://static.bootcss.com/www/assets/img/logo.png">
+            </h4>
+            <p>本网站所列开源项目的中文版文档全部由<a href="http://www.bootcss.com/">Bootstrap中文网</a>成员翻译整理，并全部遵循 <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议发布。</p>
+          </div>
+          <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+              <div class="col-xs-3">
+                <h4>关于</h4>
+                <ul class="list-unstyled">
+                  <li><a href="/about/">关于我们</a></li>
+                  <li><a href="/ad/">广告合作</a></li>
+                  <li><a href="/links/">友情链接</a></li>
+                  <li><a href="/hr/">招聘</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>联系方式</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a></li>
+                  <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>旗下网站</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://www.golaravel.com/" target="_blank">Laravel中文网</a></li>
+                  <li><a href="http://www.ghostchina.com/" target="_blank">Ghost中国</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-3">
+                <h4>赞助商</h4>
+                <ul class="list-unstyled">
+                  <li><a href="http://www.ucloud.cn/" target="_blank">UCloud</a></li>
+                  <li><a href="https://www.upyun.com" target="_blank">又拍云</a></li>
+                </ul>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom">
+          <ul class="list-inline text-center">
+            <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></li><li>京公网安备11010802014853</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</div>
+
+	<script src="jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
